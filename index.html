@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NERSI ₦50,000 Relief – Official Facts & Scam Warnings (Independent Guide)</title>
   <meta name="description" content="Independent information about Nigeria's NERSI ₦50,000 cash support programme. Learn the official facts and how to avoid scam websites.">
+  <meta property="og:title" content="NERSI ₦50,000 Relief – Official Facts & Scam Warnings">
+  <meta property="og:description" content="Independent guide: You cannot apply or pay anyone for NERSI. Official facts + how to avoid scam websites.">
+  <meta property="og:type" content="website">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #222; background: #f7f8fa; }
@@ -25,6 +28,16 @@
     a:hover { text-decoration: underline; }
     footer { text-align: center; padding: 30px 16px; font-size: 0.85rem; color: #666; border-top: 1px solid #ddd; margin-top: 40px; }
     .note { font-size: 0.9rem; color: #555; font-style: italic; }
+    .share-section { background: #fff; border-radius: 10px; padding: 18px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; }
+    .share-section h3 { font-size: 1.05rem; margin-bottom: 14px; color: #0f3d2e; }
+    .share-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 6px; color: #fff !important; font-weight: 600; font-size: 0.95rem; text-decoration: none !important; border: none; cursor: pointer; transition: opacity 0.2s; }
+    .share-btn:hover { opacity: 0.9; }
+    .share-whatsapp { background: #25D366; }
+    .share-facebook { background: #1877F2; }
+    .share-twitter { background: #000000; }
+    .share-copy { background: #546e7a; }
+    .copy-toast { display: none; margin-top: 10px; font-size: 0.9rem; color: #2e7d32; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -45,6 +58,17 @@
     The real NERSI page is hosted by the Ministry at:<br>
     <a href="https://fmhapr.gov.ng/nersi" target="_blank" rel="noopener">https://fmhapr.gov.ng/nersi</a><br><br>
     Official Helpline: <strong>0700-022-2222</strong>
+  </div>
+
+  <div class="share-section">
+    <h3>Share this correct information with family & friends</h3>
+    <div class="share-buttons">
+      <a class="share-btn share-whatsapp" id="whatsapp-share" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn share-facebook" id="facebook-share" href="#" target="_blank" rel="noopener">Facebook</a>
+      <a class="share-btn share-twitter" id="twitter-share" href="#" target="_blank" rel="noopener">Twitter / X</a>
+      <button class="share-btn share-copy" id="copy-link" type="button">Copy Link</button>
+    </div>
+    <div class="copy-toast" id="copy-toast">Link copied! You can now paste it anywhere.</div>
   </div>
 
   <h2>What is NERSI?</h2>
@@ -120,6 +144,17 @@
     <p class="note">Even if the code says you are not selected, that does not mean you can never be selected later — payments go out in phases.</p>
   </div>
 
+  <div class="share-section">
+    <h3>Help others avoid scams — share this page</h3>
+    <div class="share-buttons">
+      <a class="share-btn share-whatsapp" id="whatsapp-share-2" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn share-facebook" id="facebook-share-2" href="#" target="_blank" rel="noopener">Facebook</a>
+      <a class="share-btn share-twitter" id="twitter-share-2" href="#" target="_blank" rel="noopener">Twitter / X</a>
+      <button class="share-btn share-copy" id="copy-link-2" type="button">Copy Link</button>
+    </div>
+    <div class="copy-toast" id="copy-toast-2">Link copied! You can now paste it anywhere.</div>
+  </div>
+
   <div class="disclaimer" style="margin-top: 40px;">
     <strong>Final reminder:</strong> This website exists only to share publicly available information and help people avoid scams. We do not process applications, we do not collect personal data, and we cannot add anyone to the beneficiary list. Always verify information on the official government page.
   </div>
@@ -131,6 +166,35 @@
   Official source: <a href="https://fmhapr.gov.ng/nersi" target="_blank" rel="noopener">fmhapr.gov.ng/nersi</a><br>
   Helpline: 0700-022-2222
 </footer>
+
+<script>
+  const pageUrl = window.location.href;
+  const shareText = "Important: You cannot apply or pay anyone for the FG NERSI ₦50,000 support. Here are the official facts and how to avoid scam websites:";
+
+  const whatsappMsg = encodeURIComponent(shareText + " " + pageUrl);
+  document.getElementById("whatsapp-share").href = "https://wa.me/?text=" + whatsappMsg;
+  document.getElementById("whatsapp-share-2").href = "https://wa.me/?text=" + whatsappMsg;
+
+  document.getElementById("facebook-share").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl);
+  document.getElementById("facebook-share-2").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl);
+
+  const twitterMsg = encodeURIComponent(shareText);
+  document.getElementById("twitter-share").href = "https://twitter.com/intent/tweet?text=" + twitterMsg + "&url=" + encodeURIComponent(pageUrl);
+  document.getElementById("twitter-share-2").href = "https://twitter.com/intent/tweet?text=" + twitterMsg + "&url=" + encodeURIComponent(pageUrl);
+
+  function copyLink(toastId) {
+    navigator.clipboard.writeText(pageUrl).then(function() {
+      const toast = document.getElementById(toastId);
+      toast.style.display = "block";
+      setTimeout(function() { toast.style.display = "none"; }, 2500);
+    }).catch(function() {
+      prompt("Copy this link:", pageUrl);
+    });
+  }
+
+  document.getElementById("copy-link").addEventListener("click", function() { copyLink("copy-toast"); });
+  document.getElementById("copy-link-2").addEventListener("click", function() { copyLink("copy-toast-2"); });
+</script>
 
 </body>
 </html>
